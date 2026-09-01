@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ملف المستخدم - GenusAI Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- الشريط الجانبي -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Genus<span>AI</span></div>
+        </div>
+        
+        <div class="admin-info">
+            <div class="admin-avatar">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="admin-name">أحمد محمد</div>
+            <div class="admin-role">مدير النظام</div>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="users.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>إدارة المستخدمين</span>
+            </a>
+            <a href="notifications.html" class="menu-item">
+                <i class="fas fa-bell"></i>
+                <span>الإشعارات</span>
+            </a>
+            <a href="courses.html" class="menu-item">
+                <i class="fas fa-book"></i>
+                <span>إدارة الدورات</span>
+            </a>
+            <a href="feedback.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>الآراء والتقييمات</span>
+            </a>
+            <a href="messages.html" class="menu-item">
+                <i class="fas fa-envelope"></i>
+                <span>رسائل التواصل</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- الهيدر -->
+        <div class="header">
+            <div class="header-left">
+                <a href="users.html" class="back-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة إلى المستخدمين
+                </a>
+                <h1 class="page-title">ملف المستخدم</h1>
+            </div>
+            <div class="header-actions">
+                <div class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <a href="logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </div>
+
+        <!-- قسم عرض بيانات المستخدم -->
+        <div class="content-section active">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <div class="avatar-large">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="profile-info">
+                        <h2>أحمد محمد</h2>
+                        <p class="user-email">ahmed@example.com</p>
+                        <div class="user-status">
+                            <span class="status status-active">نشط</span>
+                            <span class="user-role">طالب</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <a href="user-edit.html?id=1" class="btn btn-primary">
+                        <i class="fas fa-edit"></i>
+                        تعديل البيانات
+                    </a>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        إرسال رسالة
+                    </button>
+                    <button class="btn btn-danger">
+                        <i class="fas fa-ban"></i>
+                        تعطيل الحساب
+                    </button>
+                </div>
+            </div>
+
+            <div class="profile-grid">
+                <!-- المعلومات الشخصية -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-user-circle"></i> المعلومات الشخصية</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>الاسم الكامل:</label>
+                                <span>أحمد محمد أحمد</span>
+                            </div>
+                            <div class="info-item">
+                                <label>البريد الإلكتروني:</label>
+                                <span>ahmed@example.com</span>
+                            </div>
+                            <div class="info-item">
+                                <label>رقم الهاتف:</label>
+                                <span>+966551234567</span>
+                            </div>
+                            <div class="info-item">
+                                <label>الجنس:</label>
+                                <span>ذكر</span>
+                            </div>
+                            <div class="info-item">
+                                <label>تاريخ الميلاد:</label>
+                                <span>1995-03-15</span>
+                            </div>
+                            <div class="info-item">
+                                <label>البلد:</label>
+                                <span>المملكة العربية السعودية</span>
+                            </div>
+                            <div class="info-item">
+                                <label>المدينة:</label>
+                                <span>الرياض</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- المعلومات الأكاديمية -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-graduation-cap"></i> المعلومات الأكاديمية</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>المستوى التعليمي:</label>
+                                <span>بكالوريوس</span>
+                            </div>
+                            <div class="info-item">
+                                <label>التخصص:</label>
+                                <span>علوم الحاسب</span>
+                            </div>
+                            <div class="info-item">
+                                <label>تاريخ التسجيل:</label>
+                                <span>2023-10-15</span>
+                            </div>
+                            <div class="info-item">
+                                <label>آخر نشاط:</label>
+                                <span>2024-01-20 14:30</span>
+                            </div>
+                            <div class="info-item">
+                                <label>عدد الدورات المسجل بها:</label>
+                                <span>5 دورات</span>
+                            </div>
+                            <div class="info-item">
+                                <label>الدورات المكتملة:</label>
+                                <span>3 دورات</span>
+                            </div>
+                            <div class="info-item">
+                                <label>المعدل العام:</label>
+                                <span>4.8/5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الدورات المسجل بها -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-book"></i> الدورات المسجل بها</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="courses-list">
+                            <div class="course-item">
+                                <div class="course-info">
+                                    <h4>برمجة Python للمبتدئين</h4>
+                                    <p>التسجيل: 2023-10-20 | الحالة: <span class="status status-active">مكتمل</span></p>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                    </div>
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                            <div class="course-item">
+                                <div class="course-info">
+                                    <h4>مقدمة في الذكاء الاصطناعي</h4>
+                                    <p>التسجيل: 2023-11-05 | الحالة: <span class="status status-active">قيد الدراسة</span></p>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 65%"></div>
+                                    </div>
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                            <div class="course-item">
+                                <div class="course-info">
+                                    <h4>تعلم Machine Learning</h4>
+                                    <p>التسجيل: 2023-12-10 | الحالة: <span class="status status-pending">لم يبدأ</span></p>
+                                </div>
+                                <div class="course-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 0%"></div>
+                                    </div>
+                                    <span>0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الإحصائيات -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-bar"></i> الإحصائيات</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="stats-mini">
+                            <div class="stat-mini">
+                                <div class="stat-number">18</div>
+                                <div class="stat-label">ساعة دراسة</div>
+                            </div>
+                            <div class="stat-mini">
+                                <div class="stat-number">24</div>
+                                <div class="stat-label">اختبار مكتمل</div>
+                            </div>
+                            <div class="stat-mini">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">شهادة محصل عليها</div>
+                            </div>
+                            <div class="stat-mini">
+                                <div class="stat-number">15</div>
+                                <div class="stat-label">تقييم مقدم</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

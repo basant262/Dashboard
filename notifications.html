@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإشعارات - GenusAI Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- الشريط الجانبي -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Genus<span>AI</span></div>
+        </div>
+        
+        <div class="admin-info">
+            <div class="admin-avatar">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="admin-name">أحمد محمد</div>
+            <div class="admin-role">مدير النظام</div>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="admin dashboard.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="users.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>إدارة المستخدمين</span>
+            </a>
+            <a href="notifications.html" class="menu-item active">
+                <i class="fas fa-bell"></i>
+                <span>الإشعارات</span>
+            </a>
+            <a href="courses.html" class="menu-item">
+                <i class="fas fa-book"></i>
+                <span>إدارة الدورات</span>
+            </a>
+            <a href="feedback.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>الآراء والتقييمات</span>
+            </a>
+            <a href="messages.html" class="menu-item">
+                <i class="fas fa-envelope"></i>
+                <span>رسائل التواصل</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- الهيدر -->
+        <div class="header">
+            <h1 class="page-title">الإشعارات</h1>
+            <div class="header-actions">
+                <div class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <a href="logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </div>
+
+        <!-- قسم الإشعارات -->
+        <div class="content-section active">
+            <div class="form-container">
+                <h2 class="form-title">إرسال إشعار جديد</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="notification-title">عنوان الإشعار</label>
+                        <input type="text" id="notification-title" placeholder="أدخل عنوان الإشعار">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notification-content">محتوى الإشعار</label>
+                        <textarea id="notification-content" placeholder="أدخل محتوى الإشعار"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notification-type">نوع الإشعار</label>
+                        <select id="notification-type">
+                            <option value="">اختر نوع الإشعار</option>
+                            <option value="all">جميع المستخدمين</option>
+                            <option value="students">الطلاب فقط</option>
+                            <option value="instructors">المدربين فقط</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">إرسال الإشعار</button>
+                </form>
+            </div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h2 class="table-title">الإشعارات المرسلة</h2>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>العنوان</th>
+                            <th>النوع</th>
+                            <th>تاريخ الإرسال</th>
+                            <th>عدد المستلمين</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>ترحيب جديد بالأكاديمية</td>
+                            <td>جميع المستخدمين</td>
+                            <td>2023-10-20</td>
+                            <td>1,248</td>
+                            <td>
+                                <button class="action-btn btn-view">عرض</button>
+                                <button class="action-btn btn-delete">حذف</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>دورة جديدة متاحة</td>
+                            <td>الطلاب فقط</td>
+                            <td>2023-10-18</td>
+                            <td>856</td>
+                            <td>
+                                <button class="action-btn btn-view">عرض</button>
+                                <button class="action-btn btn-delete">حذف</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>صيانة النظام</td>
+                            <td>جميع المستخدمين</td>
+                            <td>2023-10-15</td>
+                            <td>1,248</td>
+                            <td>
+                                <button class="action-btn btn-view">عرض</button>
+                                <button class="action-btn btn-delete">حذف</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

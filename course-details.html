@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل الدورة - GenusAI Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/course-details.css">
+</head>
+<body>
+    <!-- الشريط الجانبي -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Genus<span>AI</span></div>
+        </div>
+        
+        <div class="admin-info">
+            <div class="admin-avatar">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="admin-name">أحمد محمد</div>
+            <div class="admin-role">مدير النظام</div>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="admin dashboard.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="users.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>إدارة المستخدمين</span>
+            </a>
+            <a href="notifications.html" class="menu-item">
+                <i class="fas fa-bell"></i>
+                <span>الإشعارات</span>
+            </a>
+            <a href="courses.html" class="menu-item">
+                <i class="fas fa-book"></i>
+                <span>إدارة الدورات</span>
+            </a>
+            <a href="courses-list.html" class="menu-item">
+                <i class="fas fa-list"></i>
+                <span>الدورات المتاحة</span>
+            </a>
+            <a href="feedback.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>الآراء والتقييمات</span>
+            </a>
+            <a href="messages.html" class="menu-item">
+                <i class="fas fa-envelope"></i>
+                <span>رسائل التواصل</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- الهيدر -->
+        <div class="header">
+            <div class="header-left">
+                <a href="courses.html" class="back-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة إلى الدورات
+                </a>
+                <h1 class="page-title">تفاصيل الدورة</h1>
+            </div>
+            <div class="header-actions">
+                <a href="courses-list.html" class="view-courses-btn">
+                    <i class="fas fa-list"></i>
+                    عرض الدورات المتاحة
+                </a>
+                <div class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <a href="logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </div>
+
+        <!-- قسم تفاصيل الدورة -->
+        <div class="content-section active">
+            <div class="course-details-container">
+                <div class="course-header">
+                    <div class="course-avatar-large">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="course-header-info">
+                        <div class="course-category-badge programming">برمجة</div>
+                        <h1 class="course-title-large">برمجة Python للمبتدئين</h1>
+                        <div class="course-meta-large">
+                            <div class="meta-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>المدرب: أحمد محمد</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>المدة: 30 ساعة</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span>المستوى: مبتدئ</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>عدد المسجلين: 245</span>
+                            </div>
+                        </div>
+                        <div class="course-price-section">
+                            <div class="price">499 ر.س</div>
+                            <div class="course-status status-active">نشط</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-tabs">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab="overview">نظرة عامة</button>
+                        <button class="tab-btn" data-tab="curriculum">المحتوى التعليمي</button>
+                        <button class="tab-btn" data-tab="students">الطلاب المسجلين</button>
+                        <button class="tab-btn" data-tab="reviews">التقييمات</button>
+                    </div>
+                    
+                    <div class="tabs-content">
+                        <!-- تبويب النظرة العامة -->
+                        <div class="tab-pane active" id="overview">
+                            <div class="tab-content-grid">
+                                <div class="tab-content-main">
+                                    <div class="content-card">
+                                        <h3>وصف الدورة</h3>
+                                        <p>دورة Python للمبتدئين تقدم مقدمة شاملة للغة البرمجة Python، بدءًا من الأساسيات وصولاً إلى المفاهيم المتقدمة. ستتعلم كيفية كتابة برامج Python فعالة، فهم هياكل البيانات، والعمل مع الملفات وقواعد البيانات.</p>
+                                        
+                                        <h3>أهداف الدورة</h3>
+                                        <ul class="objectives-list">
+                                            <li>فهم أساسيات لغة Python وتركيبها</li>
+                                            <li>تعلم هياكل البيانات الأساسية في Python</li>
+                                            <li>إتقان استخدام الدوال والوحدات</li>
+                                            <li>معالجة الأخطاء والاستثناءات</li>
+                                            <li>العمل مع الملفات وقواعد البيانات</li>
+                                            <li>بناء مشاريع Python عملية</li>
+                                        </ul>
+                                        
+                                        <h3>متطلبات الدورة</h3>
+                                        <ul class="requirements-list">
+                                            <li>معرفة أساسية باستخدام الكمبيوتر</li>
+                                            <li>لا توجد خبرة سابقة في البرمجة مطلوبة</li>
+                                            <li>جهاز كمبيوتر مع اتصال إنترنت</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="tab-content-sidebar">
+                                    <div class="sidebar-card">
+                                        <h3><i class="fas fa-info-circle"></i> معلومات الدورة</h3>
+                                        <div class="info-list">
+                                            <div class="info-item">
+                                                <span class="info-label">التصنيف:</span>
+                                                <span class="info-value">برمجة</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">المستوى:</span>
+                                                <span class="info-value">مبتدئ</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">المدة:</span>
+                                                <span class="info-value">30 ساعة</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">السعر:</span>
+                                                <span class="info-value">499 ر.س</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">عدد الدروس:</span>
+                                                <span class="info-value">24 درس</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">تاريخ النشر:</span>
+                                                <span class="info-value">15 مارس 2023</span>
+                                            </div>
+                                            <div class="info-item">
+                                                <span class="info-label">آخر تحديث:</span>
+                                                <span class="info-value">10 يناير 2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="sidebar-card">
+                                        <h3><i class="fas fa-chart-bar"></i> إحصائيات الدورة</h3>
+                                        <div class="stats-list">
+                                            <div class="stat-item">
+                                                <span class="stat-label">إجمالي الطلاب:</span>
+                                                <span class="stat-value">245</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-label">معدل الإكمال:</span>
+                                                <span class="stat-value">78%</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-label">متوسط التقييم:</span>
+                                                <span class="stat-value">4.8/5</span>
+                                            </div>
+                                            <div class="stat-item">
+                                                <span class="stat-label">عدد التقييمات:</span>
+                                                <span class="stat-value">189</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- تبويب المحتوى التعليمي -->
+                        <div class="tab-pane" id="curriculum">
+                            <div class="curriculum-container">
+                                <div class="curriculum-header">
+                                    <h3>المحتوى التعليمي للدورة</h3>
+                                    <button class="btn btn-primary" id="addSectionBtn">
+                                        <i class="fas fa-plus"></i>
+                                        إضافة قسم جديد
+                                    </button>
+                                </div>
+                                
+                                <div class="sections-list">
+                                    <div class="section-item">
+                                        <div class="section-header">
+                                            <div class="section-title">
+                                                <i class="fas fa-folder"></i>
+                                                <h4>المقدمة وأساسيات Python</h4>
+                                            </div>
+                                            <div class="section-actions">
+                                                <button class="action-btn btn-edit">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="action-btn btn-delete">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                                <button class="action-btn btn-view">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="lessons-list">
+                                            <div class="lesson-item">
+                                                <div class="lesson-info">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>مقدمة إلى Python وتثبيت البيئة</span>
+                                                </div>
+                                                <div class="lesson-duration">45 دقيقة</div>
+                                            </div>
+                                            <div class="lesson-item">
+                                                <div class="lesson-info">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>أنواع البيانات والمتغيرات</span>
+                                                </div>
+                                                <div class="lesson-duration">60 دقيقة</div>
+                                            </div>
+                                            <div class="lesson-item">
+                                                <div class="lesson-info">
+                                                    <i class="fas fa-play-circle"></i>
+                                                    <span>العوامل والعمليات الحسابية</span>
+                                                </div>
+                                                <div class="lesson-duration">50 دقيقة</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="section-item">
+                                        <div class="section-header">
+                                            <div class="section-title">
+                                                <i class="fas fa-folder"></i>
+                                                <h4>هياكل التحكم والبيانات</h4>
+                                            </div>
+                                            <div class="section-actions">
+                                                <button class="action-btn btn-edit">
+                                                    <i class="fas fa-edit"></i>
+                                                </button>
+                                                <button class="action-btn btn-delete">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                                <button class="action-btn btn-view">
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- تبويب الطلاب المسجلين -->
+                        <div class="tab-pane" id="students">
+                            <div class="students-container">
+                                <div class="table-container">
+                                    <div class="table-header">
+                                        <h3 class="table-title">الطلاب المسجلين في الدورة</h3>
+                                        <div class="table-actions">
+                                            <div class="search-box">
+                                                <input type="text" placeholder="بحث في الطلاب...">
+                                                <i class="fas fa-search"></i>
+                                            </div>
+                                            <button class="btn btn-primary">
+                                                <i class="fas fa-download"></i>
+                                                تصدير البيانات
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>اسم الطالب</th>
+                                                <th>البريد الإلكتروني</th>
+                                                <th>تاريخ التسجيل</th>
+                                                <th>التقدم</th>
+                                                <th>الحالة</th>
+                                                <th>الإجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>محمد أحمد</td>
+                                                <td>mohamed@example.com</td>
+                                                <td>2023-05-15</td>
+                                                <td>
+                                                    <div class="progress-container">
+                                                        <div class="progress-bar">
+                                                            <div class="progress-fill" style="width: 85%"></div>
+                                                        </div>
+                                                        <span>85%</span>
+                                                    </div>
+                                                </td>
+                                                <td><span class="status status-active">نشط</span></td>
+                                                <td>
+                                                    <button class="action-btn btn-view">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                    <button class="action-btn btn-edit">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>فاطمة خالد</td>
+                                                <td>fatima@example.com</td>
+                                                <td>2023-06-20</td>
+                                                <td>
+                                                    <div class="progress-container">
+                                                        <div class="progress-bar">
+                                                            <div class="progress-fill" style="width: 45%"></div>
+                                                        </div>
+                                                        <span>45%</span>
+                                                    </div>
+                                                </td>
+                                                <td><span class="status status-active">نشط</span></td>
+                                                <td>
+                                                    <button class="action-btn btn-view">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                    <button class="action-btn btn-edit">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- تبويب التقييمات -->
+                        <div class="tab-pane" id="reviews">
+                            <div class="reviews-container">
+                                <div class="reviews-header">
+                                    <div class="rating-overview">
+                                        <div class="rating-score">4.8</div>
+                                        <div class="rating-stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <div class="rating-count">بناءً على 189 تقييم</div>
+                                    </div>
+                                    <div class="rating-distribution">
+                                        <div class="distribution-item">
+                                            <span>5 نجوم</span>
+                                            <div class="distribution-bar">
+                                                <div class="distribution-fill" style="width: 75%"></div>
+                                            </div>
+                                            <span>75%</span>
+                                        </div>
+                                        <div class="distribution-item">
+                                            <span>4 نجوم</span>
+                                            <div class="distribution-bar">
+                                                <div class="distribution-fill" style="width: 15%"></div>
+                                            </div>
+                                            <span>15%</span>
+                                        </div>
+                                        <div class="distribution-item">
+                                            <span>3 نجوم</span>
+                                            <div class="distribution-bar">
+                                                <div class="distribution-fill" style="width: 7%"></div>
+                                            </div>
+                                            <span>7%</span>
+                                        </div>
+                                        <div class="distribution-item">
+                                            <span>2 نجوم</span>
+                                            <div class="distribution-bar">
+                                                <div class="distribution-fill" style="width: 2%"></div>
+                                            </div>
+                                            <span>2%</span>
+                                        </div>
+                                        <div class="distribution-item">
+                                            <span>1 نجوم</span>
+                                            <div class="distribution-bar">
+                                                <div class="distribution-fill" style="width: 1%"></div>
+                                            </div>
+                                            <span>1%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="reviews-list">
+                                    <div class="review-item">
+                                        <div class="review-header">
+                                            <div class="reviewer-info">
+                                                <div class="reviewer-avatar">
+                                                    <i class="fas fa-user"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="reviewer-name">عبدالله سعيد</div>
+                                                    <div class="review-date">منذ 3 أيام</div>
+                                                </div>
+                                            </div>
+                                            <div class="review-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-content">
+                                            <p>دورة رائعة ومفيدة جداً للمبتدئين. الشرح واضح والأمثلة عملية. أنصح بها بشدة لكل من يريد تعلم Python من الصفر.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="review-item">
+                                        <div class="review-header">
+                                            <div class="reviewer-info">
+                                                <div class="reviewer-avatar">
+                                                    <i class="fas fa-user"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="reviewer-name">نورة محمد</div>
+                                                    <div class="review-date">منذ أسبوع</div>
+                                                </div>
+                                            </div>
+                                            <div class="review-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-content">
+                                            <p>الدورة جيدة جداً ولكن أتمنى إضافة المزيد من التمارين العملية. المدرب ممتاز في الشرح ويجيب على جميع الأسئلة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-actions-footer">
+                    <button class="btn btn-primary" id="editCourseBtn">
+                        <i class="fas fa-edit"></i>
+                        تعديل الدورة
+                    </button>
+                    <button class="btn btn-secondary">
+                        <i class="fas fa-eye"></i>
+                        معاينة الدورة
+                    </button>
+                    <button class="btn btn-warning">
+                        <i class="fas fa-pause"></i>
+                        إيقاف الدورة
+                    </button>
+                    <button class="btn btn-danger" id="deleteCourseBtn">
+                        <i class="fas fa-trash"></i>
+                        حذف الدورة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // تفعيل التبويبات
+        document.querySelectorAll('.tab-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // إزالة النشاط من جميع الأزرار والمحتوى
+                document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+                document.querySelectorAll('.tab-pane').forEach(pane => pane.classList.remove('active'));
+                
+                // إضافة النشاط للزر والمحتوى المحدد
+                this.classList.add('active');
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // تفعيل أزرار الإجراءات
+        document.getElementById('editCourseBtn').addEventListener('click', function() {
+            window.location.href = 'course-edit.html?id=1';
+        });
+
+        document.getElementById('deleteCourseBtn').addEventListener('click', function() {
+            if (confirm('هل أنت متأكد من حذف هذه الدورة؟ لا يمكن التراجع عن هذا الإجراء.')) {
+                alert('تم حذف الدورة بنجاح');
+                window.location.href = 'courses.html';
+            }
+        });
+
+        // تفعيل أزرار إضافة قسم
+        document.getElementById('addSectionBtn').addEventListener('click', function() {
+            alert('فتح نموذج إضافة قسم جديد');
+            // هنا يمكن فتح نموذج أو نافذة منبثقة لإضافة قسم
+        });
+
+        // تفعيل أزرار فتح/إغلاق الأقسام
+        document.querySelectorAll('.section-header .btn-view').forEach(button => {
+            button.addEventListener('click', function() {
+                const section = this.closest('.section-item');
+                const lessonsList = section.querySelector('.lessons-list');
+                
+                if (lessonsList) {
+                    lessonsList.classList.toggle('expanded');
+                    const icon = this.querySelector('i');
+                    if (lessonsList.classList.contains('expanded')) {
+                        icon.className = 'fas fa-chevron-up';
+                    } else {
+                        icon.className = 'fas fa-chevron-down';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

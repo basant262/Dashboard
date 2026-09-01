@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل بيانات المستخدم - GenusAI Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- الشريط الجانبي -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Genus<span>AI</span></div>
+        </div>
+        
+        <div class="admin-info">
+            <div class="admin-avatar">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="admin-name">أحمد محمد</div>
+            <div class="admin-role">مدير النظام</div>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="users.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>إدارة المستخدمين</span>
+            </a>
+            <a href="notifications.html" class="menu-item">
+                <i class="fas fa-bell"></i>
+                <span>الإشعارات</span>
+            </a>
+            <a href="courses.html" class="menu-item">
+                <i class="fas fa-book"></i>
+                <span>إدارة الدورات</span>
+            </a>
+            <a href="feedback.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>الآراء والتقييمات</span>
+            </a>
+            <a href="messages.html" class="menu-item">
+                <i class="fas fa-envelope"></i>
+                <span>رسائل التواصل</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- الهيدر -->
+        <div class="header">
+            <div class="header-left">
+                <a href="user-profile.html?id=1" class="back-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة إلى الملف
+                </a>
+                <h1 class="page-title">تعديل بيانات المستخدم</h1>
+            </div>
+            <div class="header-actions">
+                <div class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <a href="logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </div>
+
+        <!-- قسم تعديل بيانات المستخدم -->
+        <div class="content-section active">
+            <div class="form-container">
+                <h2 class="form-title">المعلومات الشخصية</h2>
+                <form id="userEditForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">الاسم الأول</label>
+                            <input type="text" id="firstName" value="أحمد" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">اسم العائلة</label>
+                            <input type="text" id="lastName" value="محمد" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" value="ahmed@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف</label>
+                            <input type="tel" id="phone" value="+966551234567" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="gender">الجنس</label>
+                            <select id="gender" required>
+                                <option value="male" selected>ذكر</option>
+                                <option value="female">أنثى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="birthDate">تاريخ الميلاد</label>
+                            <input type="date" id="birthDate" value="1995-03-15" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="country">البلد</label>
+                            <select id="country" required>
+                                <option value="sa" selected>المملكة العربية السعودية</option>
+                                <option value="ae">الإمارات العربية المتحدة</option>
+                                <option value="kw">الكويت</option>
+                                <option value="qa">قطر</option>
+                                <option value="bh">البحرين</option>
+                                <option value="om">عمان</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">المدينة</label>
+                            <input type="text" id="city" value="الرياض" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="userStatus">حالة الحساب</label>
+                            <select id="userStatus" required>
+                                <option value="active" selected>نشط</option>
+                                <option value="inactive">غير نشط</option>
+                                <option value="suspended">موقوف</option>
+                                <option value="banned">محظور</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="userRole">دور المستخدم</label>
+                            <select id="userRole" required>
+                                <option value="student" selected>طالب</option>
+                                <option value="instructor">مدرب</option>
+                                <option value="admin">مدير</option>
+                                <option value="moderator">مشرف</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">نبذة شخصية</label>
+                        <textarea id="bio" rows="4" placeholder="أدخل نبذة عن المستخدم...">طالب مهتم بمجال الذكاء الاصطناعي والتعلم الآلي، أحب البرمجة والتطوير.</textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-save"></i>
+                            حفظ التغييرات
+                        </button>
+                        <a href="user-profile.html?id=1" class="cancel-btn">
+                            <i class="fas fa-times"></i>
+                            إلغاء
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h2 class="form-title">المعلومات الأكاديمية</h2>
+                <form id="academicForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="educationLevel">المستوى التعليمي</label>
+                            <select id="educationLevel">
+                                <option value="">اختر المستوى التعليمي</option>
+                                <option value="highschool" selected>ثانوية عامة</option>
+                                <option value="diploma">دبلوم</option>
+                                <option value="bachelor">بكالوريوس</option>
+                                <option value="master">ماجستير</option>
+                                <option value="phd">دكتوراه</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="major">التخصص</label>
+                            <input type="text" id="major" value="علوم الحاسب">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="university">الجامعة / المؤسسة</label>
+                            <input type="text" id="university" value="جامعة الملك سعود">
+                        </div>
+                        <div class="form-group">
+                            <label for="graduationYear">سنة التخرج</label>
+                            <input type="number" id="graduationYear" value="2018" min="1900" max="2030">
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-save"></i>
+                            حفظ المعلومات الأكاديمية
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h2 class="form-title">إعدادات الحساب المتقدمة</h2>
+                <div class="danger-zone">
+                    <h3><i class="fas fa-exclamation-triangle"></i> منطقة الخطر</h3>
+                    <p>هذه الإجراءات لا يمكن التراجع عنها. كن حذراً عند استخدامها.</p>
+                    
+                    <div class="danger-actions">
+                        <button class="btn btn-warning" id="resetPasswordBtn">
+                            <i class="fas fa-key"></i>
+                            إعادة تعيين كلمة المرور
+                        </button>
+                        <button class="btn btn-danger" id="suspendAccountBtn">
+                            <i class="fas fa-ban"></i>
+                            تعليق الحساب
+                        </button>
+                        <button class="btn btn-danger" id="deleteAccountBtn">
+                            <i class="fas fa-trash"></i>
+                            حذف الحساب نهائياً
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // تفعيل النماذج
+        document.getElementById('userEditForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم حفظ البيانات الشخصية بنجاح!');
+        });
+
+        document.getElementById('academicForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('تم حفظ المعلومات الأكاديمية بنجاح!');
+        });
+
+        // تفعيل أزرار منطقة الخطر
+        document.getElementById('resetPasswordBtn').addEventListener('click', function() {
+            if (confirm('هل أنت متأكد من إعادة تعيين كلمة المرور؟ سيتم إرسال رابط تعيين جديد للمستخدم.')) {
+                alert('تم إرسال رابط إعادة تعيين كلمة المرور!');
+            }
+        });
+
+        document.getElementById('suspendAccountBtn').addEventListener('click', function() {
+            if (confirm('هل أنت متأكد من تعليق هذا الحساب؟ لن يتمكن المستخدم من الدخول حتى إلغاء التعليق.')) {
+                alert('تم تعليق الحساب بنجاح!');
+            }
+        });
+
+        document.getElementById('deleteAccountBtn').addEventListener('click', function() {
+            if (confirm('⚠️ تحذير: هذا الإجراء لا يمكن التراجع عنه!\n\nهل أنت متأكد من حذف هذا الحساب نهائياً؟')) {
+                if (confirm('❌ تأكيد نهائي: جميع بيانات المستخدم سيتم حذفها بشكل دائم. هل تريد المتابعة؟')) {
+                    alert('تم حذف الحساب بنجاح!');
+                    window.location.href = 'users.html';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

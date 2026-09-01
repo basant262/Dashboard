@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسائل التواصل - GenusAI Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- الشريط الجانبي -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Genus<span>AI</span></div>
+        </div>
+        
+        <div class="admin-info">
+            <div class="admin-avatar">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="admin-name">أحمد محمد</div>
+            <div class="admin-role">مدير النظام</div>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="admin dashboard.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="users.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>إدارة المستخدمين</span>
+            </a>
+            <a href="notifications.html" class="menu-item">
+                <i class="fas fa-bell"></i>
+                <span>الإشعارات</span>
+            </a>
+            <a href="courses.html" class="menu-item">
+                <i class="fas fa-book"></i>
+                <span>إدارة الدورات</span>
+            </a>
+            <a href="feedback.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>الآراء والتقييمات</span>
+            </a>
+            <a href="messages.html" class="menu-item active">
+                <i class="fas fa-envelope"></i>
+                <span>رسائل التواصل</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- الهيدر -->
+        <div class="header">
+            <h1 class="page-title">رسائل التواصل</h1>
+            <div class="header-actions">
+                <div class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <a href="logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </div>
+
+        <!-- قسم رسائل التواصل -->
+        <div class="content-section active">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fde8e8; color: #e53e3e;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">23</div>
+                        <div class="stat-label">رسائل جديدة</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e6f7ee; color: #0c9770;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">تم الرد</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fef5e6; color: #e68a00;">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">قيد المراجعة</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e6f0ff; color: #1a73e8;">
+                        <i class="fas fa-inbox"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">191</div>
+                        <div class="stat-label">إجمالي الرسائل</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <div class="table-header">
+                    <h2 class="table-title">رسائل التواصل</h2>
+                    <div class="table-actions">
+                        <div class="search-box">
+                            <input type="text" placeholder="بحث...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>الاسم</th>
+                            <th>البريد الإلكتروني</th>
+                            <th>الهاتف</th>
+                            <th>الموضوع</th>
+                            <th>التاريخ</th>
+                            <th>الحالة</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>خالد أحمد</td>
+                            <td>khalid@example.com</td>
+                            <td>0551122334</td>
+                            <td>استفسار عن دورة Python</td>
+                            <td>2023-10-20</td>
+                            <td><span class="status status-pending">غير مقروء</span></td>
+                            <td>
+                                <button class="action-btn btn-view">عرض</button>
+                                <button class="action-btn btn-delete">حذف</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>فاطمة علي</td>
+                            <td>fatima@example.com</td>
+                            <td>0554433221</td>
+                            <td>مشكلة في التسجيل</td>
+                            <td>2023-10-19</td>
+                            <td><span class="status status-active">تم الرد</span></td>
+                            <td>
+                                <button class="action-btn btn-view">عرض</button>
+                                <button class="action-btn btn-delete">حذف</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>محمد السعدي</td>
+                            <td>mohamed@example.com</td>
+                            <td>0556677889</td>
+                            <td>اقتراح تحسين</td>
+                            <td>2023-10-18</td>
+                            <td><span class="status status-active">تم الرد</span></td>
+                            <td>
+                                <button class="action-btn btn-view">عرض</button>
+                                <button class="action-btn btn-delete">حذف</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>نورة القحطاني</td>
+                            <td>nora@example.com</td>
+                            <td>0559988776</td>
+                            <td>استفسار عن الشهادات</td>
+                            <td>2023-10-17</td>
+                            <td><span class="status status-pending">غير مقروء</span></td>
+                            <td>
+                                <button class="action-btn btn-view">عرض</button>
+                                <button class="action-btn btn-delete">حذف</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

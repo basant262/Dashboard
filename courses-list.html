@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدورات المتاحة - GenusAI Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- الشريط الجانبي -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Genus<span>AI</span></div>
+        </div>
+        
+        <div class="admin-info">
+            <div class="admin-avatar">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="admin-name">أحمد محمد</div>
+            <div class="admin-role">مدير النظام</div>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="admin dashboard.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="users.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>إدارة المستخدمين</span>
+            </a>
+            <a href="notifications.html" class="menu-item">
+                <i class="fas fa-bell"></i>
+                <span>الإشعارات</span>
+            </a>
+            <a href="courses.html" class="menu-item">
+                <i class="fas fa-book"></i>
+                <span>إدارة الدورات</span>
+            </a>
+            <a href="courses-list.html" class="menu-item active">
+                <i class="fas fa-list"></i>
+                <span>الدورات المتاحة</span>
+            </a>
+            <a href="feedback.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>الآراء والتقييمات</span>
+            </a>
+            <a href="messages.html" class="menu-item">
+                <i class="fas fa-envelope"></i>
+                <span>رسائل التواصل</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- الهيدر -->
+        <div class="header">
+            <div class="header-left">
+                <a href="courses.html" class="back-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة للإدارة
+                </a>
+                <h1 class="page-title">الدورات المتاحة</h1>
+            </div>
+            <div class="header-actions">
+                <div class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <a href="logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </div>
+
+        <!-- قسم الدورات المتاحة -->
+        <div class="content-section active">
+            <!-- فلترة وبحث -->
+            <div class="filters-container">
+                <div class="filters-row">
+                    <div class="search-box large">
+                        <input type="text" placeholder="ابحث عن دورة..." id="courseSearch">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="filter-group">
+                        <select id="categoryFilter">
+                            <option value="">جميع التصنيفات</option>
+                            <option value="programming">برمجة</option>
+                            <option value="ai">ذكاء اصطناعي</option>
+                            <option value="robotics">روبوتات</option>
+                            <option value="icdl">ICDL</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select id="priceFilter">
+                            <option value="">جميع الأسعار</option>
+                            <option value="free">مجانية</option>
+                            <option value="0-500">حتى 500 ر.س</option>
+                            <option value="500-1000">500 - 1000 ر.س</option>
+                            <option value="1000+">أكثر من 1000 ر.س</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select id="sortBy">
+                            <option value="newest">الأحدث أولاً</option>
+                            <option value="popular">الأكثر شعبية</option>
+                            <option value="price-low">السعر: من الأقل للأعلى</option>
+                            <option value="price-high">السعر: من الأعلى للأقل</option>
+                            <option value="rating">الأعلى تقييماً</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- شبكة عرض الدورات -->
+            <div class="courses-grid" id="coursesGrid">
+                <!-- دورة 1 -->
+                <div class="course-card" data-category="programming" data-price="499" data-rating="4.8" data-students="245">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/300x200/1a365d/ffffff?text=Python" alt="برمجة Python">
+                        <div class="course-badge">الأكثر مبيعاً</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category programming">برمجة</div>
+                        <h3 class="course-title">برمجة Python للمبتدئين</h3>
+                        <p class="course-description">تعلم أساسيات البرمجة بلغة Python من الصفر حتى الاحتراف مع مشاريع عملية</p>
+                        
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>30 ساعة</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>245 طالب</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (120 تقييم)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">499 ر.س</span>
+                                <span class="original-price">799 ر.س</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="fas fa-eye"></i>
+                                    عرض
+                                </button>
+                                <button class="btn btn-secondary btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                    تعديل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دورة 2 -->
+                <div class="course-card" data-category="ai" data-price="699" data-rating="4.7" data-students="178">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/300x200/ff7846/ffffff?text=AI" alt="الذكاء الاصطناعي">
+                        <div class="course-badge trending">شائع</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category ai">ذكاء اصطناعي</div>
+                        <h3 class="course-title">مقدمة في الذكاء الاصطناعي</h3>
+                        <p class="course-description">استكشاف عالم الذكاء الاصطناعي وتطبيقاته في الحياة العملية</p>
+                        
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>40 ساعة</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>178 طالب</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.7 (95 تقييم)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">699 ر.س</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="fas fa-eye"></i>
+                                    عرض
+                                </button>
+                                <button class="btn btn-secondary btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                    تعديل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دورة 3 -->
+                <div class="course-card" data-category="ai" data-price="899" data-rating="4.9" data-students="92">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/300x200/4cd964/ffffff?text=ML" alt="Machine Learning">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category ai">ذكاء اصطناعي</div>
+                        <h3 class="course-title">تعلم Machine Learning</h3>
+                        <p class="course-description">احتراف تعلم الآلة والخوارزميات المتقدمة مع تطبيقات عملية</p>
+                        
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>50 ساعة</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>92 طالب</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (67 تقييم)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">899 ر.س</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="fas fa-eye"></i>
+                                    عرض
+                                </button>
+                                <button class="btn btn-secondary btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                    تعديل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دورة 4 -->
+                <div class="course-card" data-category="robotics" data-price="599" data-rating="4.5" data-students="134">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/300x200/1a73e8/ffffff?text=Robotics" alt="الروبوتات">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category robotics">روبوتات</div>
+                        <h3 class="course-title">أساسيات الروبوتات</h3>
+                        <p class="course-description">تعلم تصميم وبرمجة الروبوتات من الصفر مع مشاريع عملية</p>
+                        
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>35 ساعة</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>134 طالب</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.5 (89 تقييم)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">599 ر.س</span>
+                                <span class="original-price">899 ر.س</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="fas fa-eye"></i>
+                                    عرض
+                                </button>
+                                <button class="btn btn-secondary btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                    تعديل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دورة 5 -->
+                <div class="course-card" data-category="programming" data-price="0" data-rating="4.6" data-students="356">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/300x200/0c9770/ffffff?text=Web" alt="تطوير الويب">
+                        <div class="course-badge free">مجاني</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category programming">برمجة</div>
+                        <h3 class="course-title">تطوير الويب للمبتدئين</h3>
+                        <p class="course-description">تعلم HTML, CSS, JavaScript لبناء مواقع ويب تفاعلية</p>
+                        
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>45 ساعة</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>356 طالب</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.6 (210 تقييم)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price free">مجاني</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn btn-primary btn-sm">
+                                    <i class="fas fa-eye"></i>
+                                    عرض
+                                </button>
+                                <button class="btn btn-secondary btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                    تعديل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- دورة 6 -->
+                <div class="course-card" data-category="icdl" data-price="399" data-rating="4.4" data-students="187">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/300x200/e68a00/ffffff?text=ICDL" alt="ICDL">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-category icdl">ICDL</div>
+                        <h3 class="course-title">شهادة ICDL كاملة</h3>
+                        <p class="course-description">تحضير كامل لشهادة الرخصة الدولية لقيادة الحاسوب</p>
+                        
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>60 ساعة</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>187 طالب</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.4 (134 تقييم)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price">399 ر.س</span>
+                                <span class="original-price">599 ر.س</span>
+                            </div>
+                            <div class="course-actions">
+                                <button class="btn btn-primary btn-sm" >
+                                    <i class="fas fa-eye"></i>
+                                    عرض
+                                </button>
+                                <button class="btn btn-secondary btn-sm">
+                                    <i class="fas fa-edit"></i>
+                                    تعديل
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ترقيم الصفحات -->
+            <div class="pagination">
+                <button class="page-btn disabled">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // فلترة الدورات
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('courseSearch');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const priceFilter = document.getElementById('priceFilter');
+            const sortBy = document.getElementById('sortBy');
+            const coursesGrid = document.getElementById('coursesGrid');
+            const courseCards = document.querySelectorAll('.course-card');
+
+            function filterCourses() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const categoryValue = categoryFilter.value;
+                const priceValue = priceFilter.value;
+                const sortValue = sortBy.value;
+
+                courseCards.forEach(card => {
+                    const title = card.querySelector('.course-title').textContent.toLowerCase();
+                    const category = card.getAttribute('data-category');
+                    const price = parseInt(card.getAttribute('data-price'));
+                    
+                    let show = true;
+
+                    // البحث
+                    if (searchTerm && !title.includes(searchTerm)) {
+                        show = false;
+                    }
+
+                    // التصنيف
+                    if (categoryValue && category !== categoryValue) {
+                        show = false;
+                    }
+
+                    // السعر
+                    if (priceValue) {
+                        switch(priceValue) {
+                            case 'free':
+                                if (price !== 0) show = false;
+                                break;
+                            case '0-500':
+                                if (price === 0 || price > 500) show = false;
+                                break;
+                            case '500-1000':
+                                if (price < 500 || price > 1000) show = false;
+                                break;
+                            case '1000+':
+                                if (price <= 1000) show = false;
+                                break;
+                        }
+                    }
+
+                    card.style.display = show ? 'block' : 'none';
+                });
+
+                // الترتيب
+                sortCourses(sortValue);
+            }
+
+            function sortCourses(sortValue) {
+                const container = coursesGrid;
+                const cards = Array.from(courseCards).filter(card => card.style.display !== 'none');
+
+                cards.sort((a, b) => {
+                    switch(sortValue) {
+                        case 'newest':
+                            return 0; // يمكن إضافة تاريخ الإضافة لاحقاً
+                        case 'popular':
+                            return parseInt(b.getAttribute('data-students')) - parseInt(a.getAttribute('data-students'));
+                        case 'price-low':
+                            return parseInt(a.getAttribute('data-price')) - parseInt(b.getAttribute('data-price'));
+                        case 'price-high':
+                            return parseInt(b.getAttribute('data-price')) - parseInt(a.getAttribute('data-price'));
+                        case 'rating':
+                            return parseFloat(b.getAttribute('data-rating')) - parseFloat(a.getAttribute('data-rating'));
+                        default:
+                            return 0;
+                    }
+                });
+
+                // إعادة ترتيب العناصر في الـ DOM
+                cards.forEach(card => container.appendChild(card));
+            }
+
+            // إضافة مستمعي الأحداث
+            searchInput.addEventListener('input', filterCourses);
+            categoryFilter.addEventListener('change', filterCourses);
+            priceFilter.addEventListener('change', filterCourses);
+            sortBy.addEventListener('change', filterCourses);
+
+            // تفعيل أزرار العرض والتعديل
+            document.querySelectorAll('.btn-primary').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const courseCard = this.closest('.course-card');
+                    const courseTitle = courseCard.querySelector('.course-title').textContent;
+                    alert(`عرض دورة: ${courseTitle}`);
+                    // يمكن توجيه المستخدم لصفحة عرض الدورة التفصيلية
+                });
+            });
+
+            document.querySelectorAll('.btn-secondary').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const courseCard = this.closest('.course-card');
+                    const courseTitle = courseCard.querySelector('.course-title').textContent;
+                    alert(`تعديل دورة: ${courseTitle}`);
+                    // يمكن توجيه المستخدم لصفحة تعديل الدورة
+                });
+            });
+        });
+    </script>
+</body>
+</html>

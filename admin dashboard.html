@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الأدمن - GenusAI Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- الشريط الجانبي -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Genus<span>AI</span></div>
+        </div>
+        
+        <div class="admin-info">
+            <div class="admin-avatar">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="admin-name">أحمد محمد</div>
+            <div class="admin-role">مدير النظام</div>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="admin dashboard.html" class="menu-item active">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="users.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>إدارة المستخدمين</span>
+            </a>
+            <a href="notifications.html" class="menu-item">
+                <i class="fas fa-bell"></i>
+                <span>الإشعارات</span>
+            </a>
+            <a href="courses.html" class="menu-item">
+                <i class="fas fa-book"></i>
+                <span>إدارة الدورات</span>
+            </a>
+            <a href="feedback.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>الآراء والتقييمات</span>
+            </a>
+            <a href="messages.html" class="menu-item">
+                <i class="fas fa-envelope"></i>
+                <span>رسائل التواصل</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- الهيدر -->
+        <div class="header">
+            <h1 class="page-title">لوحة تحكم الأدمن</h1>
+            <div class="header-actions">
+                <div class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <a href="logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </div>
+
+        <!-- قسم الإحصائيات -->
+        <div class="content-section active">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e6f7ee; color: #0c9770;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">1,248</div>
+                        <div class="stat-label">إجمالي المستخدمين</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e6f0ff; color: #1a73e8;">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">عدد الدورات</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fef5e6; color: #e68a00;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">356</div>
+                        <div class="stat-label">التقييمات</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fde8e8; color: #e53e3e;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">89</div>
+                        <div class="stat-label">رسائل جديدة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- أزرار التحكم السريع -->
+            <div class="control-buttons">
+                <a href="users.html" class="control-btn">
+                    <div class="control-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="control-title">عرض المستخدمين</h3>
+                    <p class="control-desc">عرض وإدارة جميع مستخدمي النظام</p>
+                </a>
+                
+                <a href="notifications.html" class="control-btn">
+                    <div class="control-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="control-title">إرسال إشعار</h3>
+                    <p class="control-desc">إرسال إشعارات للمستخدمين</p>
+                </a>
+                
+                <a href="courses.html" class="control-btn">
+                    <div class="control-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <h3 class="control-title">إضافة دورة</h3>
+                    <p class="control-desc">إضافة دورة تدريبية جديدة</p>
+                </a>
+                
+                <a href="feedback.html" class="control-btn">
+                    <div class="control-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="control-title">عرض التقييمات</h3>
+                    <p class="control-desc">عرض جميع التقييمات والآراء</p>
+                </a>
+                
+                <a href="messages.html" class="control-btn">
+                    <div class="control-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="control-title">رسائل التواصل</h3>
+                    <p class="control-desc">عرض رسائل التواصل مع العملاء</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

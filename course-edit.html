@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل الدورة - GenusAI Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/course-edit.css">
+</head>
+<body>
+    <!-- الشريط الجانبي -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Genus<span>AI</span></div>
+        </div>
+        
+        <div class="admin-info">
+            <div class="admin-avatar">
+                <i class="fas fa-user-cog"></i>
+            </div>
+            <div class="admin-name">أحمد محمد</div>
+            <div class="admin-role">مدير النظام</div>
+        </div>
+        
+        <div class="sidebar-menu">
+            <a href="admin dashboard.html" class="menu-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>لوحة التحكم</span>
+            </a>
+            <a href="users.html" class="menu-item">
+                <i class="fas fa-users"></i>
+                <span>إدارة المستخدمين</span>
+            </a>
+            <a href="notifications.html" class="menu-item">
+                <i class="fas fa-bell"></i>
+                <span>الإشعارات</span>
+            </a>
+            <a href="courses.html" class="menu-item">
+                <i class="fas fa-book"></i>
+                <span>إدارة الدورات</span>
+            </a>
+            <a href="courses-list.html" class="menu-item">
+                <i class="fas fa-list"></i>
+                <span>الدورات المتاحة</span>
+            </a>
+            <a href="feedback.html" class="menu-item">
+                <i class="fas fa-star"></i>
+                <span>الآراء والتقييمات</span>
+            </a>
+            <a href="messages.html" class="menu-item">
+                <i class="fas fa-envelope"></i>
+                <span>رسائل التواصل</span>
+            </a>
+            <a href="settings.html" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>الإعدادات</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- الهيدر -->
+        <div class="header">
+            <div class="header-left">
+                <a href="course-details.html" class="back-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة للتفاصيل
+                </a>
+                <h1 class="page-title">تعديل الدورة</h1>
+            </div>
+            <div class="header-actions">
+                <a href="courses-list.html" class="view-courses-btn">
+                    <i class="fas fa-list"></i>
+                    عرض الدورات
+                </a>
+                <div class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <a href="logout.php" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    تسجيل الخروج
+                </a>
+            </div>
+        </div>
+
+        <!-- قسم تعديل الدورة -->
+        <div class="content-section active">
+            <div class="edit-course-container">
+                <div class="edit-course-header">
+                    <div class="edit-course-avatar">
+                        <i class="fas fa-code"></i>
+                        <input type="file" id="course-image" accept="image/*">
+                        <div class="change-text">تغيير الصورة</div>
+                    </div>
+                    <div class="edit-course-info">
+                        <h1 class="edit-course-title">برمجة Python للمبتدئين</h1>
+                        <div class="edit-course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-history"></i>
+                                <span>آخر تحديث: 10 يناير 2024</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>245 طالب مسجل</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>4.8 تقييم</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نموذج التعديل -->
+                <form class="edit-course-form" id="editCourseForm">
+                    <div class="form-tabs">
+                        <button type="button" class="form-tab active" data-tab="basic">المعلومات الأساسية</button>
+                        <button type="button" class="form-tab" data-tab="content">المحتوى التعليمي</button>
+                        <button type="button" class="form-tab" data-tab="settings">الإعدادات</button>
+                    </div>
+
+                    <!-- تبويب المعلومات الأساسية -->
+                    <div class="form-tab-content active" id="basic-tab">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="course-name">
+                                    <span class="required">*</span>اسم الدورة
+                                </label>
+                                <input type="text" id="course-name" class="form-control" value="برمجة Python للمبتدئين" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="course-category">
+                                    <span class="required">*</span>التصنيف
+                                </label>
+                                <select id="course-category" class="form-control select" required>
+                                    <option value="">اختر التصنيف</option>
+                                    <option value="programming" selected>برمجة</option>
+                                    <option value="ai">ذكاء اصطناعي</option>
+                                    <option value="robotics">روبوتات</option>
+                                    <option value="icdl">ICDL</option>
+                                    <option value="design">تصميم</option>
+                                    <option value="business">أعمال</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="course-price">
+                                    <span class="required">*</span>السعر (ريال سعودي)
+                                </label>
+                                <input type="number" id="course-price" class="form-control" value="499" min="0" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="course-duration">
+                                    <span class="required">*</span>المدة (ساعات)
+                                </label>
+                                <input type="number" id="course-duration" class="form-control" value="30" min="1" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="course-level">
+                                    <span class="required">*</span>المستوى
+                                </label>
+                                <select id="course-level" class="form-control select" required>
+                                    <option value="">اختر المستوى</option>
+                                    <option value="beginner" selected>مبتدئ</option>
+                                    <option value="intermediate">متوسط</option>
+                                    <option value="advanced">متقدم</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="course-instructor">
+                                    <span class="required">*</span>المدرب
+                                </label>
+                                <select id="course-instructor" class="form-control select" required>
+                                    <option value="">اختر المدرب</option>
+                                    <option value="1" selected>أحمد محمد</option>
+                                    <option value="2">سارة عبدالله</option>
+                                    <option value="3">محمد علي</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label class="form-label" for="course-description">
+                                    <span class="required">*</span>وصف الدورة
+                                </label>
+                                <textarea id="course-description" class="form-control textarea" required>دورة Python للمبتدئين تقدم مقدمة شاملة للغة البرمجة Python، بدءًا من الأساسيات وصولاً إلى المفاهيم المتقدمة. ستتعلم كيفية كتابة برامج Python فعالة، فهم هياكل البيانات، والعمل مع الملفات وقواعد البيانات.</textarea>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label class="form-label" for="course-objectives">أهداف الدورة</label>
+                                <textarea id="course-objectives" class="form-control textarea">فهم أساسيات لغة Python وتركيبها
+تعلم هياكل البيانات الأساسية في Python
+إتقان استخدام الدوال والوحدات
+معالجة الأخطاء والاستثناءات
+العمل مع الملفات وقواعد البيانات
+بناء مشاريع Python عملية</textarea>
+                                <span class="form-hint">كل هدف في سطر منفصل</span>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label class="form-label" for="course-requirements">متطلبات الدورة</label>
+                                <textarea id="course-requirements" class="form-control textarea">معرفة أساسية باستخدام الكمبيوتر
+لا توجد خبرة سابقة في البرمجة مطلوبة
+جهاز كمبيوتر مع اتصال إنترنت</textarea>
+                                <span class="form-hint">كل متطلب في سطر منفصل</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- تبويب المحتوى التعليمي -->
+                    <div class="form-tab-content" id="content-tab">
+                        <div class="curriculum-editor">
+                            <div class="section-editor">
+                                <div class="section-header">
+                                    <input type="text" class="section-title-input" value="المقدمة وأساسيات Python">
+                                    <div class="section-actions">
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary btn-sm btn-toggle">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="lessons-list">
+                                    <div class="lesson-item">
+                                        <input type="text" class="lesson-input" value="مقدمة إلى Python وتثبيت البيئة">
+                                        <input type="text" class="lesson-duration-input" value="45 دقيقة">
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <input type="text" class="lesson-input" value="أنواع البيانات والمتغيرات">
+                                        <input type="text" class="lesson-duration-input" value="60 دقيقة">
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                    <div class="lesson-item">
+                                        <input type="text" class="lesson-input" value="العوامل والعمليات الحسابية">
+                                        <input type="text" class="lesson-duration-input" value="50 دقيقة">
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-secondary btn-sm add-lesson">
+                                    <i class="fas fa-plus"></i> إضافة درس جديد
+                                </button>
+                            </div>
+                            
+                            <div class="section-editor">
+                                <div class="section-header">
+                                    <input type="text" class="section-title-input" value="هياكل التحكم والبيانات">
+                                    <div class="section-actions">
+                                        <button type="button" class="btn btn-danger btn-sm">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-secondary btn-sm btn-toggle">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="lessons-list" style="display: none;">
+                                    <!-- دروس ستظهر عند النقر -->
+                                </div>
+                                <button type="button" class="btn btn-secondary btn-sm add-lesson">
+                                    <i class="fas fa-plus"></i> إضافة درس جديد
+                                </button>
+                            </div>
+                            
+                            <button type="button" class="btn btn-primary" id="addSectionBtn">
+                                <i class="fas fa-plus"></i> إضافة قسم جديد
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- تبويب الإعدادات -->
+                    <div class="form-tab-content" id="settings-tab">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="course-status">حالة الدورة</label>
+                                <select id="course-status" class="form-control select">
+                                    <option value="active" selected>نشط</option>
+                                    <option value="inactive">غير نشط</option>
+                                    <option value="draft">مسودة</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="course-language">لغة الدورة</label>
+                                <select id="course-language" class="form-control select">
+                                    <option value="ar" selected>العربية</option>
+                                    <option value="en">الإنجليزية</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label class="form-label">خيارات التسجيل</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> السماح بالتسجيل المباشر
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox"> يتطلب موافقة المدرب
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" checked> إرسال إشعارات البريد الإلكتروني
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label class="form-label" for="course-tags">الكلمات المفتاحية</label>
+                                <input type="text" id="course-tags" class="form-control" value="Python, برمجة, مبتدئين, تعلم البرمجة">
+                                <span class="form-hint">افصل بين الكلمات بفواصل</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- أزرار التذييل -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-save"></i>
+                            حفظ التعديلات
+                        </button>
+                        <button type="button" class="btn btn-secondary" id="previewBtn">
+                            <i class="fas fa-eye"></i>
+                            معاينة
+                        </button>
+                        <button type="button" class="btn btn-outline" id="cancelBtn">
+                            <i class="fas fa-times"></i>
+                            إلغاء
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/course-edit.js"></script>
+</body>
+</html>
